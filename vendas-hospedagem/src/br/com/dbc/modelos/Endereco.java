@@ -1,3 +1,5 @@
+package br.com.dbc.modelos;
+
 public class Endereco {
 
     //1 - residencial, 2 - comercial
@@ -17,19 +19,17 @@ public class Endereco {
 
     private String pais;
 
-    public void imprimirEndereco(){
-        if(getTipo() == 1){
-            System.out.println("Contato residencial");
-        }else{
-            System.out.println("Contato comercial");
-        }
-        System.out.println("logradouro: "+ getLogradouro());
-        System.out.println("numero: "+ getNumero());
-        System.out.println("complemento: "+ getComplemento());
-        System.out.println("cep: "+ getCep());
-        System.out.println("cidade: "+ getCidade());
-        System.out.println("estado: "+ getEstado());
-        System.out.println("pais: "+ getPais());
+    public Endereco() { }
+
+    public Endereco(int tipo, String logradouro, int numero, String complemento, String cep, String cidade, String estado, String pais) {
+        this.tipo = tipo;
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.cep = cep;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.pais = pais;
     }
 
     public int getTipo() {
@@ -94,5 +94,20 @@ public class Endereco {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public void imprimirEndereco(){
+        if(getTipo() == 1){
+            System.out.println("Contato residencial");
+        }else{
+            System.out.println("Contato comercial");
+        }
+        System.out.println("logradouro: "+ getLogradouro());
+        System.out.println("numero: "+ getNumero());
+        System.out.println("complemento: "+ getComplemento());
+        System.out.println("cep: "+ getCep());
+        System.out.println("cidade: "+ getCidade());
+        System.out.println("estado: "+ getEstado());
+        System.out.println("pais: "+ getPais());
     }
 }

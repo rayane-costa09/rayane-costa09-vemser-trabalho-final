@@ -1,3 +1,5 @@
+package br.com.dbc.modelos;
+
 public class Contato {
 
     private String descricao;
@@ -7,14 +9,12 @@ public class Contato {
     //1 - residencial, 2 - comercial
     private int tipo;
 
-    public void imprimirContato(){
-        System.out.println("Descrição: "+ getDescricao());
-        System.out.println("Telefone: "+ getTelefone());
-        if(getTipo() == 1){
-            System.out.println("Contato residencial");
-        }else{
-            System.out.println("Contato comercial");
-        }
+    public Contato() { }
+
+    public Contato(String descricao, String telefone, int tipo) {
+        this.descricao = descricao;
+        this.telefone = telefone;
+        this.tipo = tipo;
     }
 
     public String getDescricao() {
@@ -39,5 +39,15 @@ public class Contato {
 
     public void setTipo(int tipo) {
         this.tipo = tipo;
+    }
+
+    public void imprimirContato(){
+        if(getTipo() == 1){
+            System.out.println("Contato residencial");
+        }else{
+            System.out.println("Contato comercial");
+        }
+        System.out.println("Descrição: "+ getDescricao());
+        System.out.println("Telefone: "+ getTelefone());
     }
 }
