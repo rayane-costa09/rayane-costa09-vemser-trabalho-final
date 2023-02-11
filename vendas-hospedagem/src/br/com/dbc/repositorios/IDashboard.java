@@ -1,6 +1,6 @@
 package br.com.dbc.repositorios;
 
-public interface IDashoboard {
+public interface IDashboard {
     void mostrarDados();
 //    void exibirInformacoes();
 }

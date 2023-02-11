@@ -115,4 +115,8 @@ public class ColaboradorService implements ICrud {
             }
         }
     }
+
+    public void cadastrarHospedagem(){
+
+    }
 }
