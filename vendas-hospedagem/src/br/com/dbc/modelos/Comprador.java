@@ -9,13 +9,15 @@ public class Comprador extends Usuario {
     private String usuario;
     private String senha;
     private String email;
-    public Comprador() { }
 
-    public Comprador(String nome, String cpf) {
+    public Comprador() {
+    }
+
+    public Comprador(String nome, String cpf, String usuario, String senha, String email) {
         super(nome, cpf);
-        this.email = email;
         this.usuario = usuario;
         this.senha = senha;
+        this.email = email;
     }
 
     public String getUsuario() {
@@ -41,12 +43,12 @@ public class Comprador extends Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public List<Contato> getContatos() { return getContatos(); }
-
-    public void setContatos(Contato contatos) { this.getContatos().add(contatos); }
-
-    public List<Endereco> getEnderecos() { return getEnderecos(); }
-
-    public void setEnderecos(Endereco enderecos) { this.getEnderecos().add(enderecos); }
+//
+//    public List<Contato> getContatos() { return getContatos(); }
+//
+//    public void setContatos(Contato contatos) { this.getContatos().add(contatos); }
+//
+//    public List<Endereco> getEnderecos() { return getEnderecos(); }
+//
+//    public void setEnderecos(Endereco enderecos) { this.getEnderecos().add(enderecos); }
 }

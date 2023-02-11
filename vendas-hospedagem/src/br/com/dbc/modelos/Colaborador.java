@@ -2,12 +2,15 @@ package br.com.dbc.modelos;
 
 import br.com.dbc.modelos.Usuario;
 
+import java.util.List;
+
 public class Colaborador extends Usuario {
 
     private String usuario;
     private String senha;
 
-    public Colaborador() { }
+    public Colaborador() {
+    }
 
     public Colaborador(String nome, String cpf, String usuario, String senha) {
         super(nome, cpf);
@@ -30,13 +33,12 @@ public class Colaborador extends Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-
-
-    public void imprimirColaborador() {
-        System.out.println("ID: " + getId());
-        System.out.println("Nome: " + getNome());
-        System.out.println("CPF: " + getCpf());
-        System.out.println("Usuario: " + getUsuario());
-    }
+//
+//    public List<Contato> getContatos() { return getContatos(); }
+//
+//    public void setContatos(Contato contatos) { this.getContatos().add(contatos); }
+//
+//    public List<Endereco> getEnderecos() { return getEnderecos(); }
+//
+//    public void setEnderecos(Endereco enderecos) { this.getEnderecos().add(enderecos); }
 }

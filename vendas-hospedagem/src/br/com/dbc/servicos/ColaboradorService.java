@@ -37,7 +37,8 @@ public class ColaboradorService implements ICrud {
             System.out.println("Lista Vazia -- Não há colaboradores cadastrados!");
         } else {
             for (Colaborador colaborador : colaboradores) {
-                System.out.println(colaborador);
+                System.out.println("Id: " + colaborador.getId() + " Nome: " + colaborador.getNome() +
+                        " CPF: " + colaborador.getCpf() + " Usuario: " + colaborador.getUsuario() + "\n");
             }
         }
     }
