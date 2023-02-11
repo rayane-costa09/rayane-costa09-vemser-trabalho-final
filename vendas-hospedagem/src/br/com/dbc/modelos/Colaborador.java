@@ -12,8 +12,8 @@ public class Colaborador extends Usuario {
     public Colaborador() {
     }
 
-    public Colaborador(String nome, String cpf, String usuario, String senha) {
-        super(nome, cpf);
+    public Colaborador(String nome, String cpf, String usuario, String senha, List<Contato> contatos, List<Endereco> enderecos) {
+        super(nome, cpf, contatos, enderecos);
         this.usuario = usuario;
         this.senha = senha;
     }
@@ -33,12 +33,4 @@ public class Colaborador extends Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-//
-//    public List<Contato> getContatos() { return getContatos(); }
-//
-//    public void setContatos(Contato contatos) { this.getContatos().add(contatos); }
-//
-//    public List<Endereco> getEnderecos() { return getEnderecos(); }
-//
-//    public void setEnderecos(Endereco enderecos) { this.getEnderecos().add(enderecos); }
 }

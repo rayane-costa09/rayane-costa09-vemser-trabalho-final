@@ -8,18 +8,28 @@ public abstract class Usuario {
     private Integer id;
     private String nome;
     private String cpf;
-    private List <Contato> contatos = new ArrayList<>();
+    private List<Contato> contatos = new ArrayList<>();
     private List<Endereco> enderecos = new ArrayList<>();
     // contador de ID para simular o auto incremento do banco de dados
     private static int contadorId = 1;
 
-    public Usuario() {}
+    public Usuario() {
+    }
 
     public Usuario(String nome, String cpf) {
 //        id = contadorId++;
         this.id = contadorId++;
         this.nome = nome;
         this.cpf = cpf;
+    }
+
+    //teste para saber se o construtor está funcionando
+    public Usuario(String nome, String cpf, List<Contato> contatos, List<Endereco> enderecos) {
+        this.id = contadorId++;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.contatos = contatos;
+        this.enderecos = enderecos;
     }
 
     public Integer getId() {
@@ -46,34 +56,19 @@ public abstract class Usuario {
         this.cpf = cpf;
     }
 
-    public List<Contato> getContatos() { return contatos; }
-
-    public void setContatos(Contato contatos) { this.contatos.add(contatos); }
-
-    public List<Endereco> getEnderecos() { return enderecos; }
-
-    public void setEnderecos(Endereco enderecos) { this.enderecos.add(enderecos); }
-
-    public void imprimirUsuario() {
-        System.out.println("ID: " + id);
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
-        imprimirContato();
-        imprimirEndereco();
+    public List<Contato> getContatos() {
+        return contatos;
     }
-    public void imprimirContato() {
-        System.out.println("-------- Contatos --------");
-        for (Contato contato : contatos ) {
-            if(contato != null)
-                contato.imprimirContato();
-        }
+
+    public void setContatos(Contato contatos) {
+        this.contatos.add(contatos);
     }
-    public void imprimirEndereco() {
-        System.out.println("-------- Endereços --------");
-        for (Endereco endereco : enderecos) {
-            if (endereco != null) {
-                endereco.imprimirEndereco();
-            }
-        }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(Endereco enderecos) {
+        this.enderecos.add(enderecos);
     }
 }

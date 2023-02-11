@@ -41,13 +41,22 @@ public class Contato {
         this.tipo = tipo;
     }
 
-    public void imprimirContato(){
-        if(getTipo() == 1){
-            System.out.println("Contato residencial");
-        }else{
-            System.out.println("Contato comercial");
-        }
-        System.out.println("Descrição: "+ getDescricao());
-        System.out.println("Telefone: "+ getTelefone());
+//    public void imprimirContato(){
+//        if(getTipo() == 1){
+//            System.out.println("Contato residencial");
+//        }else{
+//            System.out.println("Contato comercial");
+//        }
+//        System.out.println("Descrição: "+ getDescricao());
+//        System.out.println("Telefone: "+ getTelefone());
+//    }
+
+    @Override
+    public String toString() {
+        return "Contato{" +
+                "descricao='" + descricao + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", tipo=" + tipo +
+                '}';
     }
 }

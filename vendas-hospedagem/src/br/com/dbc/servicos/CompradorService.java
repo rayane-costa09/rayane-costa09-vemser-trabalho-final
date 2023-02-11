@@ -1,6 +1,8 @@
 package br.com.dbc.servicos;
 
 import br.com.dbc.modelos.Comprador;
+import br.com.dbc.modelos.Contato;
+import br.com.dbc.modelos.Endereco;
 import br.com.dbc.repositorios.ICrud;
 
 import java.util.ArrayList;
@@ -11,6 +13,8 @@ public class CompradorService implements ICrud {
 
     static Scanner scanner = new Scanner(System.in);
     private List<Comprador> compradores;
+    private List<Contato> contatos = new ArrayList<>();
+    private List<Endereco> enderecos = new ArrayList<>();
 
     public CompradorService() {
         compradores = new ArrayList<>();
@@ -28,7 +32,36 @@ public class CompradorService implements ICrud {
         String senha = scanner.nextLine();
         System.out.println("Digite o email do comprador: ");
         String email = scanner.nextLine();
-        compradores.add(new Comprador(nome, cpf, usuario, senha, email));
+        //    public Contato(String descricao, String telefone, int tipo)
+        System.out.println("Digite a descrição do contato: ");
+        String descricao = scanner.nextLine();
+        System.out.println("Digite o telefone do contato: ");
+        String telefone = scanner.nextLine();
+        System.out.println("Digite o tipo do contato: ");
+        int tipo = scanner.nextInt();
+        contatos.add(new Contato(descricao, telefone, tipo));
+        scanner.nextLine();
+        //    public Endereco(int tipo, String logradouro, int numero, String complemento, String cep, String cidade, String estado, String pais)
+        System.out.println("Digite o tipo do endereço: ");
+        int tipoEndereco = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Digite o logradouro do endereço: ");
+        String logradouro = scanner.nextLine();
+        System.out.println("Digite o numero do endereço: ");
+        int numero = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Digite o complemento do endereço: ");
+        String complemento = scanner.nextLine();
+        System.out.println("Digite o cep do endereço: ");
+        String cep = scanner.nextLine();
+        System.out.println("Digite a cidade do endereço: ");
+        String cidade = scanner.nextLine();
+        System.out.println("Digite o estado do endereço: ");
+        String estado = scanner.nextLine();
+        System.out.println("Digite o pais do endereço: ");
+        String pais = scanner.nextLine();
+        enderecos.add(new Endereco(tipoEndereco, logradouro, numero, complemento, cep, cidade, estado, pais));
+        compradores.add(new Comprador(nome, cpf, usuario, senha, email, contatos, enderecos));
         System.out.println("Comprador " + nome + " cadastrado com sucesso!");
     }
 

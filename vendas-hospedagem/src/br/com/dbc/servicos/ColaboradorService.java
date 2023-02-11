@@ -1,6 +1,8 @@
 package br.com.dbc.servicos;
 
 import br.com.dbc.modelos.Colaborador;
+import br.com.dbc.modelos.Contato;
+import br.com.dbc.modelos.Endereco;
 import br.com.dbc.repositorios.ICrud;
 
 import java.util.ArrayList;
@@ -12,6 +14,8 @@ public class ColaboradorService implements ICrud {
     static Scanner scanner = new Scanner(System.in);
 
     private List<Colaborador> colaboradores;
+    private List<Contato> contatos = new ArrayList<>();
+    private List<Endereco> enderecos = new ArrayList<>();
 
     public ColaboradorService() {
         colaboradores = new ArrayList<>();
@@ -27,7 +31,37 @@ public class ColaboradorService implements ICrud {
         String usuario = scanner.nextLine();
         System.out.println("Digite a senha do colaborador: ");
         String senha = scanner.nextLine();
-        colaboradores.add(new Colaborador(nome, cpf, usuario, senha));
+        //    public Contato(String descricao, String telefone, int tipo)
+        System.out.println("Digite a descrição do contato: ");
+        String descricao = scanner.nextLine();
+        System.out.println("Digite o telefone do contato: ");
+        String telefone = scanner.nextLine();
+        System.out.println("Digite o tipo do contato: ");
+        int tipo = scanner.nextInt();
+        contatos.add(new Contato(descricao, telefone, tipo));
+        scanner.nextLine();
+        //    public Endereco(int tipo, String logradouro, int numero, String complemento, String cep, String cidade, String estado, String pais)
+        System.out.println("Digite o tipo do endereço: ");
+        int tipoEndereco = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Digite o logradouro do endereço: ");
+        String logradouro = scanner.nextLine();
+        System.out.println("Digite o numero do endereço: ");
+        int numero = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Digite o complemento do endereço: ");
+        String complemento = scanner.nextLine();
+        System.out.println("Digite o cep do endereço: ");
+        String cep = scanner.nextLine();
+        System.out.println("Digite a cidade do endereço: ");
+        String cidade = scanner.nextLine();
+        System.out.println("Digite o estado do endereço: ");
+        String estado = scanner.nextLine();
+        System.out.println("Digite o pais do endereço: ");
+        String pais = scanner.nextLine();
+        enderecos.add(new Endereco(tipoEndereco, logradouro, numero, complemento, cep, cidade, estado, pais));
+//        colaboradores.add(new Colaborador(nome, cpf, usuario, senha));
+        colaboradores.add(new Colaborador(nome, cpf, usuario, senha, contatos, enderecos));
         System.out.println("Colaborador " + nome + " cadastrado com sucesso!");
     }
 
@@ -38,7 +72,9 @@ public class ColaboradorService implements ICrud {
         } else {
             for (Colaborador colaborador : colaboradores) {
                 System.out.println("Id: " + colaborador.getId() + " Nome: " + colaborador.getNome() +
-                        " CPF: " + colaborador.getCpf() + " Usuario: " + colaborador.getUsuario() + "\n");
+                        " CPF: " + colaborador.getCpf() + " Usuario: " + colaborador.getUsuario() +
+                        " Contatos : " + contatos.toString() +
+                        " Enderecos:" + enderecos.toString() + "\n");
             }
         }
     }

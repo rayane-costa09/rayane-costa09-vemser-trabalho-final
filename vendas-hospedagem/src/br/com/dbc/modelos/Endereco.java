@@ -4,21 +4,13 @@ public class Endereco {
 
     //1 - residencial, 2 - comercial
     private int tipo;
-
     private String logradouro;
-
     private int numero;
-
     private String complemento;
-
     private String cep;
-
     private String cidade;
-
     private String estado;
-
     private String pais;
-
     public Endereco() { }
 
     public Endereco(int tipo, String logradouro, int numero, String complemento, String cep, String cidade, String estado, String pais) {
@@ -92,22 +84,19 @@ public class Endereco {
         return pais;
     }
 
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
+    public void setPais(String pais) { this.pais = pais; }
 
-    public void imprimirEndereco(){
-        if(getTipo() == 1){
-            System.out.println("Contato residencial");
-        }else{
-            System.out.println("Contato comercial");
-        }
-        System.out.println("logradouro: "+ getLogradouro());
-        System.out.println("numero: "+ getNumero());
-        System.out.println("complemento: "+ getComplemento());
-        System.out.println("cep: "+ getCep());
-        System.out.println("cidade: "+ getCidade());
-        System.out.println("estado: "+ getEstado());
-        System.out.println("pais: "+ getPais());
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "tipo=" + tipo +
+                ", logradouro='" + logradouro + '\'' +
+                ", numero=" + numero +
+                ", complemento='" + complemento + '\'' +
+                ", cep='" + cep + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                ", pais='" + pais + '\'' +
+                '}';
     }
 }
