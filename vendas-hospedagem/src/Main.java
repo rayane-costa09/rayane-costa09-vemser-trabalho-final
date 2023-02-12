@@ -5,26 +5,32 @@ public class Main {
         // Criação de Compradores
         Comprador comprador1 = new Comprador("João", "joao@gmail.com", "123456");
         Comprador comprador2 = new Comprador("Maria", "maria@gmail.com", "789012");
+        Comprador comprador3 = new Comprador("José", "josé@gmail.com", "345678");
 
         // Adição dos Compradores ao sistema
         comprador1.cadastrar();
         comprador2.cadastrar();
+        comprador3.cadastrar();
 
         // Criação de Colaboradores
         Colaborador colaborador1 = new Colaborador("Pedro", "pedro@gmail.com", "abcdef");
         Colaborador colaborador2 = new Colaborador("Marta", "marta@gmail.com", "ghijkl");
+        Colaborador colaborador3 = new Colaborador("Paulo", "paulo@gmail.com", "mnopqr");
 
         // Adição dos Colaboradores ao sistema
         colaborador1.cadastrar();
         colaborador2.cadastrar();
+        colaborador3.cadastrar();
 
         // Cadastro de Planos de Hospedagem
         PlanoHospedagem plano1 = new PlanoHospedagem("Plano Básico", 50.0);
         PlanoHospedagem plano2 = new PlanoHospedagem("Plano Premium", 100.0);
+        PlanoHospedagem plano3 = new PlanoHospedagem("Plano Super", 150.0);
 
         // Adição dos Planos de Hospedagem ao sistema
         plano1.cadastrar();
         plano2.cadastrar();
+        plano3.cadastrar();
 
         // Cadastro de Hospedagens pelos Colaboradores
         Hospedagem hospedagem1 = colaborador1.cadastrarHospedagem("Av. Paulista, 100", 80.0);

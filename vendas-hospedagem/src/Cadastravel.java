@@ -1,10 +1,10 @@
 // Interface para classes que podem ser cadastradas
 public interface Cadastravel {
-    public void cadastrar();
+    void cadastrar();
 
-    public Cadastravel consultar(String nome);
+    Cadastravel consultar(String nome);
 
-    public void alterar(Cadastravel cadastravel);
+    void alterar(Cadastravel cadastravel);
 
-    public void deletar(Cadastravel cadastravel);
+    void deletar(Cadastravel cadastravel);
 }

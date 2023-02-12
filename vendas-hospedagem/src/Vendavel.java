@@ -1,12 +1,12 @@
 // Interface para classes que podem ser vendidas
 public interface Vendavel {
-    public double getPreco();
+    double getPreco();
 
-    public void cadastrar();
+    void cadastrar();
 
-    public Vendavel consultar();
+    Vendavel consultar();
 
-    public void alterar();
+    void alterar();
 
-    public void deletar();
+    void deletar();
 }
