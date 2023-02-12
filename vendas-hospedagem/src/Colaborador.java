@@ -27,8 +27,9 @@ public class Colaborador extends Usuario implements Cadastravel {
 
     //Implementação altera um objeto Cadastravel
 
-    public void alterar(Cadastravel colaborador) {
-
+    public void alterar(Cadastravel colaborador, String nome) {
+        Colaborador colaboradorAlterado = (Colaborador) colaborador;
+        colaboradorAlterado.setNome(nome);
     }
 
     //Método que deleta um objeto Cadastravel

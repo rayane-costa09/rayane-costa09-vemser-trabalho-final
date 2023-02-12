@@ -25,8 +25,9 @@ public class Comprador extends Usuario implements Cadastravel {
     }
 
     //Implementação altera um objeto Cadastravel
-    public void alterar(Cadastravel comprador) {
-
+    public void alterar(Cadastravel comprador, String nome) {
+        Comprador compradorAlterado = (Comprador) comprador;
+        compradorAlterado.setNome(nome);
     }
 
     //Método que deleta um objeto Cadastravel

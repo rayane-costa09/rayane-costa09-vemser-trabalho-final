@@ -4,7 +4,7 @@ public interface Cadastravel {
 
     Cadastravel consultar(String nome);
 
-    void alterar(Cadastravel cadastravel);
+    void alterar(Cadastravel cadastravel, String nome);
 
     void deletar(Cadastravel cadastravel);
 }

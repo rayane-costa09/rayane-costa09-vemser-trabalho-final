@@ -11,6 +11,8 @@ public class Main {
         comprador1.cadastrar();
         comprador2.cadastrar();
         comprador3.cadastrar();
+        // Remover comprador
+        comprador3.deletar(comprador3);
 
         // Criação de Colaboradores
         Colaborador colaborador1 = new Colaborador("Pedro", "pedro@gmail.com", "abcdef");
