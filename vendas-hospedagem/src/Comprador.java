@@ -31,8 +31,8 @@ public class Comprador extends Usuario implements Cadastravel {
     }
 
     //Método que deleta um objeto Cadastravel
-    public void deletar(Cadastravel comprador) {
-        Sistema.getCompradores().remove(comprador);
+    public void deletar() {
+        Sistema.getCompradores().remove(this);
     }
 
 }

@@ -12,7 +12,7 @@ public class Main {
         comprador2.cadastrar();
         comprador3.cadastrar();
         // Remover comprador
-        comprador3.deletar(comprador3);
+        comprador3.deletar();
 
         // Criação de Colaboradores
         Colaborador colaborador1 = new Colaborador("Pedro", "pedro@gmail.com", "abcdef");
