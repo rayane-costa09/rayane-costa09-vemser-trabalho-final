@@ -6,5 +6,5 @@ public interface Cadastravel {
 
     void alterar(Cadastravel cadastravel, String nome);
 
-    void deletar(Cadastravel cadastravel);
+    void deletar();
 }

@@ -34,8 +34,8 @@ public class Colaborador extends Usuario implements Cadastravel {
 
     //Método que deleta um objeto Cadastravel
 
-    public void deletar(Cadastravel colaborador) {
-        Sistema.getColaboradores().remove(colaborador);
+    public void deletar() {
+        Sistema.getColaboradores().remove(this);
     }
 
     // Método para cadastrar uma nova hospedagem
